@@ -1,0 +1,56 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/dede/esp-idf/MqttExample/build/bootloader && /home/dede/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/dede/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/dede/esp-idf/MqttExample/build/bootloader/bootloader.bin
+Bootloader binary size 0x6690 bytes. 0x970 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/agenda.c.obj
+/home/dede/esp-idf/MqttExample/main/agenda.c: In function 'obter_horario_ntp':
+/home/dede/esp-idf/MqttExample/main/agenda.c:69:5: warning: 'sntp_setoperatingmode' is deprecated: use esp_sntp_setoperatingmode() instead [-Wdeprecated-declarations]
+   69 |     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/dede/esp-idf/MqttExample/main/agenda.c:6:
+/home/dede/esp-idf/components/lwip/include/apps/esp_sntp.h:249:6: note: declared here
+  249 | void sntp_setoperatingmode(u8_t operating_mode)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/MqttExample/main/agenda.c:70:5: warning: 'sntp_setservername' is deprecated: use esp_sntp_setservername() instead [-Wdeprecated-declarations]
+   70 |     sntp_setservername(0, "pool.ntp.org");
+      |     ^~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/components/lwip/include/apps/esp_sntp.h:263:6: note: declared here
+  263 | void sntp_setservername(u8_t idx, const char *server)
+      |      ^~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/MqttExample/main/agenda.c:71:5: warning: 'sntp_init' is deprecated: use esp_sntp_init() instead [-Wdeprecated-declarations]
+   71 |     sntp_init();
+      |     ^~~~~~~~~
+/home/dede/esp-idf/components/lwip/include/apps/esp_sntp.h:269:6: note: declared here
+  269 | void sntp_init(void)
+      |      ^~~~~~~~~
+/home/dede/esp-idf/MqttExample/main/agenda.c: In function 'obter_horario_ntp_sync':
+/home/dede/esp-idf/MqttExample/main/agenda.c:87:5: warning: 'sntp_setoperatingmode' is deprecated: use esp_sntp_setoperatingmode() instead [-Wdeprecated-declarations]
+   87 |     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/components/lwip/include/apps/esp_sntp.h:249:6: note: declared here
+  249 | void sntp_setoperatingmode(u8_t operating_mode)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/MqttExample/main/agenda.c:88:5: warning: 'sntp_setservername' is deprecated: use esp_sntp_setservername() instead [-Wdeprecated-declarations]
+   88 |     sntp_setservername(0, "pool.ntp.org");
+      |     ^~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/components/lwip/include/apps/esp_sntp.h:263:6: note: declared here
+  263 | void sntp_setservername(u8_t idx, const char *server)
+      |      ^~~~~~~~~~~~~~~~~~
+/home/dede/esp-idf/MqttExample/main/agenda.c:89:5: warning: 'sntp_init' is deprecated: use esp_sntp_init() instead [-Wdeprecated-declarations]
+   89 |     sntp_init();
+      |     ^~~~~~~~~
+/home/dede/esp-idf/components/lwip/include/apps/esp_sntp.h:269:6: note: declared here
+  269 | void sntp_init(void)
+      |      ^~~~~~~~~
+[4/8] Linking C static library esp-idf/main/libmain.a
+[5/8] Generating esp-idf/esp_system/ld/sections.ld
+[6/8] Linking CXX executable MqttExample.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/dede/esp-idf/MqttExample/build/MqttExample.bin
+[8/8] cd /home/dede/esp-idf/MqttExample/build && /home/dede/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/dede/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dede/esp-idf/MqttExample/build/partition_table/partition-table.bin /home/dede/esp-idf/MqttExample/build/MqttExample.bin
+MqttExample.bin binary size 0xdfbb0 bytes. Smallest app partition is 0x100000 bytes. 0x20450 bytes (13%) free.

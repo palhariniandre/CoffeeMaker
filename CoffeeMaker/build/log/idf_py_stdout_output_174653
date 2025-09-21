@@ -1,0 +1,131 @@
+Command: /home/dede/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/dede/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dede/esp-idf/MqttExample/build/MqttExample.elf /home/dede/esp-idf/MqttExample/build/bootloader/bootloader.elf -m '/home/dede/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/dede/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6372
+load:0x40078000,len:15920
+ho 0 tail 12 room 4
+load:0x40080400,len:3880
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1489-g4e036983a7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 15 2025 17:20:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f0b4h (127156) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0002f0dc vaddr=3ffb0000 size=00f3ch (  3900) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3308h (668424) map[0m
+[0;32mI (375) esp_image: segment 3: paddr=000d3330 vaddr=3ffb0f3c size=03258h ( 12888) load[0m
+[0;32mI (380) esp_image: segment 4: paddr=000d6590 vaddr=40080000 size=194c0h (103616) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000efa58 vaddr=50000000 size=0009ch (   156) load[0m
+[0;32mI (435) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (435) boot: Disabling RNG early entropy source...[0m
+[0;32mI (446) cpu_start: Multicore app[0m
+[0;32mI (454) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (456) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     MqttExample[0m
+[0;32mI (464) app_init: App version:      v6.0-dev-1489-g4e036983a7[0m
+[0;32mI (470) app_init: Compile time:     Aug 15 2025 17:20:26[0m
+[0;32mI (475) app_init: ELF file SHA256:  040e7db2f...[0m
+[0;32mI (479) app_init: ESP-IDF:          v6.0-dev-1489-g4e036983a7[0m
+[0;32mI (484) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (488) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (492) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (496) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (503) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (507) heap_init: At 3FFB8900 len 00027700 (157 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (518) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (524) heap_init: At 400994C0 len 00006B40 (26 KiB): IRAM[0m
+[0;33mW (530) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc084c, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 5984c42[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formatting: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: accept mbox: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (652) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (662) wifi_init: tcp rx win: 5760[0m
+[0;32mI (662) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (672) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (672) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (682) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (772) wifi:mode : sta (a0:b7:65:20:b8:0c)[0m
+[0;32mI (782) wifi:enable tsf[0m
+[0;32mI (782) WIFI: Conectando ao Wi-Fi...[0m
+[0;32mI (792) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (792) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (802) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (812) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (852) wifi:connected with wifi5, aid = 2, channel 5, BW20, bssid = 2e:cc:22:52:a9:50[0m
+[0;32mI (852) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (862) wifi:pm start, type: 1[0m
+
+[0;32mI (862) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (882) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (882) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (892) wifi:<ba-add>idx:0 (ifx:0, 2e:cc:22:52:a9:50), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1912) esp_netif_handlers: sta ip: 192.168.121.160, mask: 255.255.255.0, gw: 192.168.121.58[0m
+[0;32mI (4782) AGENDA: Hora NTP obtida: Fri Aug 15 17:22:06 2025[0m
+
+[0;32mI (4792) MAIN: Aguardando agendamento...[0m
+[0;32mI (4792) MAIN: DEBUG: agora = 30, agendamento = 1755289326, diff = 0[0m
+[0;32mI (4792) MAIN: Agendamento para 174 segundos. Dormindo...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6372
+load:0x40078000,len:15920
+ho 0 tail 12 room 4
+load:0x40080400,len:3880
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1489-g4e036983a7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 15 2025 17:20:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f0b4h (127156) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0002f0dc va

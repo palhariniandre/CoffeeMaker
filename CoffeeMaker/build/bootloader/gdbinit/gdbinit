@@ -1,0 +1,2 @@
+source /home/dede/esp-idf/MqttExample/build/bootloader/gdbinit/symbols
+source /home/dede/esp-idf/MqttExample/build/bootloader/gdbinit/connect
